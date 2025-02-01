@@ -1,16 +1,7 @@
-#include <iostream> 
+#include <iostream>  
 #include <vector>
 #include <limits>
 using namespace std;
-
-void printBoard(const vector<char>& board) {
-    cout << "\n";
-    cout << " " << board[6] << " | " << board[7] << " | " << board[8] << "\n";
-    cout << "---+---+---\n";
-    cout << " " << board[3] << " | " << board[4] << " | " << board[5] << "\n";
-    cout << "---+---+---\n";
-    cout << " " << board[0] << " | " << board[1] << " | " << board[2] << "\n\n";
-}
 
 void displayInitialBoard() {
     cout << "\n";
@@ -24,6 +15,15 @@ void displayInitialBoard() {
     cout << " 4 | 5 | 6 \n";
     cout << "---+---+---\n";
     cout << " 1 | 2 | 3 \n\n";
+}
+
+void printBoard(const vector<char>& board) {
+    cout << "\n";
+    cout << " " << board[6] << " | " << board[7] << " | " << board[8] << "\n";
+    cout << "---+---+---\n";
+    cout << " " << board[3] << " | " << board[4] << " | " << board[5] << "\n";
+    cout << "---+---+---\n";
+    cout << " " << board[0] << " | " << board[1] << " | " << board[2] << "\n\n";
 }
 
 bool isWinner(const vector<char>& board, char player) {
