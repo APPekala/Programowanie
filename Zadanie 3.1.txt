@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    float x, y;
+    
+    cout << "Podaj pierwsza liczbe:";
+    cin >> x;
+    cout << "Podaj druga liczbe:";
+    cin >> y;
+
+    
+    float suma = x + y;
+    float roznica = x - y;
+    float iloczyn = x * y;
+    suma = round(suma * 100) / 100;
+    roznica = round(roznica * 100) / 100;
+    iloczyn = round(iloczyn * 100) / 100;
+
+    cout << "suma wynosi:" << suma << "\n";
+    cout << "roznica wynosi:" << roznica << "\n";
+    cout << "iloczyn wynosi:" << iloczyn << "\n";
+
+    if (y != 0) {
+        float iloraz = x / y;
+        iloraz = round(iloraz * 100) / 100;
+        cout << "iloraz wynosi:" << iloraz;
+    }
+    else {
+        cout << "iloraz wynosi: blad nie mozna dzielic przez 0";
+    }
+
+}

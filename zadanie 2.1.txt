@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout << "Podaj liczbe\n";
+    cin >> n;
+    int z = 0;
+    int suma = 0;
+    while (z <= n)
+    {
+        for (int i = 1; i <= z; i++)
+        {
+            suma = suma + i;
+        }
+        z++;
+    }
+    cout << "Suma wynosi:";
+    cout << suma;
+    return 0;
+}

@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+unsigned long long silnia(int n) {
+	if (n == 0) {
+		return 1;
+	}
+	return n * silnia(n - 1);
+}
+
+unsigned long long dwumian_newtona(int n, int k) {
+	unsigned long long wynik = 1;
+	wynik = silnia(n) / (silnia(k) * silnia(n - k));
+	return wynik;
+}
+
+
+int main()
+{
+	int wielkosc;
+	cout << "podaj liczbe wierszy trojkata pascala\n";
+	cin >> wielkosc;
+
+	for (int i = 0; i < wielkosc; i++) {
+		for (int space = 0; space < wielkosc - i - 1; ++space) {
+			cout << " ";
+		}
+
+		for (int j = 0; j <= i; j++) {
+			cout << dwumian_newtona(i, j) << " ";
+		}
+
+		cout << "\n";
+	}
+}

@@ -1,0 +1,10 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Imię: Adam Pękala" << endl;  
+    cout << "Numer studenta: 34784" << endl;
+    cout << "Uczelnia: Polsko-Japońska Akademia Technik Komputerowych" << endl; 
+
+    return 0;
+}

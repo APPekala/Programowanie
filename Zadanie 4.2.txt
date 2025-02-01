@@ -1,0 +1,36 @@
+#include <iostream>
+#include <vector>
+#include <unordered_map>
+
+using namespace std;
+
+int main()
+{
+	int n;
+	cout << "podaj liczbe elementow tablicy: ";
+	cin >> n;
+	vector<int> tablica(n);
+	cout << "podaj " << n << " elementow tablicy\n";
+
+	for (int i = 0; i < n; i++) {
+		cout << "element " << i + 1 << ": ";
+		cin >> tablica[i];
+	}
+
+	unordered_map<int, int> licznik;
+	for (int i = 0; i < n; i++) {
+		licznik[tablica[i]]++;
+	}
+
+	int najczestszyElement = tablica[0];
+	int maksWystapienia = licznik[najczestszyElement];
+
+	for (const auto& para : licznik) {
+		if (para.second > maksWystapienia) {
+			najczestszyElement = para.first;
+			maksWystapienia = para.second;
+		}
+	}
+
+	cout << "Najczesciej wystepujacy element to: " << najczestszyElement << ", liczba wystapien: " << maksWystapienia;
+}

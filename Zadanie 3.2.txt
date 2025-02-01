@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	char litera;
+	cout << "Wpisuj znaki - program zakonczy sie po wpisaniu litery t \n";
+
+	do {
+		cin >> litera;
+		if (litera != 't') {
+			cout << "wpisano znak: " << litera << "\n";
+		}
+	} while (litera != 't');
+
+}

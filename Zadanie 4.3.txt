@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+	int tablica[10][10] = { 0 };
+
+	for (int i = 0; i < 10; i++) {
+		tablica[i][0] = i;
+		tablica[i][1] = i + i;
+		tablica[i][2] = i * i;
+		tablica[i][3] = i + 3;
+		tablica[i][4] = i - 4;
+	}
+
+	for (int i = 0; i < 10; i++) {
+		for (int z = 0; z < 10; z++) {
+			if (tablica[i][z] >= 0 && tablica[i][z] < 10) {
+				cout << "     " << tablica[i][z];
+			}
+			else {
+				cout << "    " << tablica[i][z];
+			}
+		}
+		cout << "\n";
+	}
+}

@@ -1,0 +1,32 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int main()
+{
+	int n;
+	cout << "Podaj liczbe elementow wektora:\n ";
+	cin >> n;
+
+	vector<int> vec(n);
+	cout << "Podaj " << n << " elementow wektora:\n";
+
+	for (int i = 0; i < n; ++i) {
+		cout << "Element " << i + 1 << ": ";
+		cin >> vec[i];
+	}
+
+	int max_value = vec[0];
+	int max_index = 0;
+
+	for (int i = 1; i < n; ++i) {
+		if (vec[i] > max_value) {
+			max_value = vec[i];
+			max_index = i;
+		}
+	}
+
+	cout << "Wartosc elementu maksymalnego:\n " << max_value;
+	cout << "\nNumer indeksu elementu maksymalnego:\n " << max_index;
+}
